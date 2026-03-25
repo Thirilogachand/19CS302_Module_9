@@ -1,45 +1,60 @@
-# EX 43 C program to Write a function to display queue elements using array.
-## DATE:
+# EX 44 C functions to perform enqueue, dequeue, display, peek in Queue using Array.
+## DATE: 
 ## AIM:
-To Write a function to display queue elements using array.
+To write a C Write a functions to perform enqueue, dequeue, display, peek in Queue using Array.
 
 ## Algorithm:
 1. Start. 
 2. Define a variables. 
-3. Write a function to display queue elements using array. 
+3. Write a functions to perform enqueue,dequeue ,display,peek in Queue using array. 
 4. Read the value using scanf. 
 5. Ask the user to make an input. 
 6. Print out the answer. 
-7. End.
+7. End   
 
 ## Program:
-```c
-float queue[50]; 
-int rear=-1,front=-1,i; 
-void display() 
+```c 
+char queue[50]; 
+int size=10,front,rear,i; 
+void enqueue(char data) 
 { 
+if(rear<size) 
+{ 
+if(front==-1) 
+{ 
+front=0; 
+} 
+rear=rear+1; 
+queue[rear]=data; 
+} 
+{ 
+printf("%c\n",queue[i]); 
+} 
+} 
+void dequeue() 
+{  
 if(front==-1||front>rear) 
-printf("No elements to display\n"); 
+{ 
+printf("Queue Underflow\n"); 
+} 
 else 
 { 
-for(i=front;i<=rear;i++) 
-printf("%.1f\n",queue[i]); 
+front=front+1; 
 } 
  
 } 
-void display() 
+void peek() 
 { 
-if(front==-1||front>rear) 
-{  
-printf("No elements to display\n"); 
-else 
-{ 
-for(i=front;i<=rear;i++)
+printf("%c\n",queue[front]); 
+ 
+} 
+ 
+}
 ```
 
 ## Output:
 
-![image](https://github.com/user-attachments/assets/6b1348f5-936d-4b8f-9478-3a848914c08c)
+![Screenshot 2025-05-07 223559](https://github.com/user-attachments/assets/ee8b9992-d1b1-4c5b-9274-6a9696e45f14)
 
 
 ## Result:
